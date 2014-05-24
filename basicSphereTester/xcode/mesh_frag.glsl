@@ -21,7 +21,7 @@ void main()
 	float falloff = sin( max( dot( Nfinal, vec3(0.25, 1.0, 0.25) ), 0.0) * 2.25);	
 	float alpha = 0.01 + (falloff_enabled ? 0.3 * pow( falloff, 25.0 ) : 0.3);
     
-    //get surface texture
+    //get texture (for kicks)
     vec3 dry = texture2D(surface_texture, gl_TexCoord[0].xy).rgb;
 
 	// output color

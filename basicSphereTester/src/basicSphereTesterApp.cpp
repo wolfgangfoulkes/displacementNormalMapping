@@ -33,7 +33,10 @@ class basicSphereTesterApp : public AppNative {
     //my functions
     bool compileShaders();
     bool createTextures();
-    bool createSphere();
+    bool loadSphere();
+    bool loadPlane();
+    
+    void createPlane();
     
     void renderDisplacementMap();
     void renderNormalMap();
@@ -51,10 +54,15 @@ class basicSphereTesterApp : public AppNative {
     
 	gl::Fbo			mNormalMapFbo;
 	gl::GlslProg	mNormalMapShader;
+    
+    gl::GlslProg	mSphereTriShader;
 	
-    TriMesh         mMesh;
-	gl::VboMesh		mVboMesh;
-	gl::GlslProg	mMeshShader;
+    TriMesh         mSphereTri;
+	gl::VboMesh		mSphereMesh;
+    
+    TriMesh         mPlaneTri;
+    gl::VboMesh     mPlaneMesh;
+	
     
     //textures
     gl::Texture     surfaceTex;
@@ -77,8 +85,8 @@ void basicSphereTesterApp::setup()
     
     if (!compileShaders()) {quit();}
     if (!createTextures()) {quit();}
-    if (!createSphere()) {quit();}
-    
+    if (!loadSphere()) {quit();}
+    if (!loadPlane()) {quit();}
     
     // create the frame buffer objects for the displacement map and the normal map
 	gl::Fbo::Format fmt; //used for both
@@ -132,18 +140,18 @@ void basicSphereTesterApp::draw()
 		gl::draw( mNormalMapFbo.getTexture(), Vec2f(256,0) );
 	}
     
-    if ( mDispMapFbo && mNormalMapFbo && mMeshShader )
+    if ( mDispMapFbo && mNormalMapFbo && mSphereTriShader )
 	{
         mDispMapFbo.getTexture().bind(0);
         mNormalMapFbo.getTexture().bind(1);
         surfaceTex.bind(2);
     
         // render our mesh using vertex displacement
-        mMeshShader.bind();
-        mMeshShader.uniform( "displacement_map", 0 );
-        mMeshShader.uniform( "normal_map", 1 );
-        mMeshShader.uniform( "surface_texture", 2 );
-        mMeshShader.uniform( "falloff_enabled", mEnableShader );
+        mSphereTriShader.bind();
+        mSphereTriShader.uniform( "displacement_map", 0 );
+        mSphereTriShader.uniform( "normal_map", 1 );
+        mSphereTriShader.uniform( "surface_texture", 2 );
+        mSphereTriShader.uniform( "falloff_enabled", mEnableShader );
         
         gl::enableAlphaBlending();
         if (mDrawWireframe) gl::enableWireframe();
@@ -151,16 +159,17 @@ void basicSphereTesterApp::draw()
     
         gl::pushMatrices();
         gl::setMatrices(mCamera);
-        gl::scale(Vec3f(25, 25, 25));
+        gl::scale(Vec3f(100, 100, 100));
         gl::rotate( mArcball.getQuat() );
-        gl::draw(mVboMesh);
+        //gl::draw(mSphereMesh);
+        gl::draw(mPlaneMesh);
         gl::popMatrices();
         
         gl::disableDepthRead();
         gl::disableAlphaBlending();
         gl::disableWireframe();
     
-        mMeshShader.unbind();
+        mSphereTriShader.unbind();
         
         mNormalMapFbo.unbindTexture();
         mDispMapFbo.unbindTexture();
@@ -213,6 +222,11 @@ void basicSphereTesterApp::keyDown( KeyEvent event )
         case KeyEvent::KEY_w:
         mDrawWireframe = !mDrawWireframe;
         break;
+        
+        case KeyEvent::KEY_0:
+        {
+            createPlane();
+        }
 	}
 }
 
@@ -241,7 +255,7 @@ bool basicSphereTesterApp::compileShaders()
 		// this shader will create a normal map based on the displacement map
 		mNormalMapShader = gl::GlslProg( loadResource("normal_map_vert.glsl"), loadResource("normal_map_frag.glsl") );
 		// this shader will use the displacement and normal maps to displace vertices of a mesh
-		mMeshShader = gl::GlslProg( loadResource("mesh_vert.glsl"), loadResource("mesh_frag.glsl") );
+		mSphereTriShader = gl::GlslProg( loadResource("mesh_vert.glsl"), loadResource("mesh_frag.glsl") );
 	}
 	catch( const std::exception &e )
 	{
@@ -338,13 +352,13 @@ bool basicSphereTesterApp::createTextures()
     return true;
 }
 
-bool basicSphereTesterApp::createSphere()
+bool basicSphereTesterApp::loadSphere()
 {
     try {
         ObjLoader loader( (DataSourceRef) loadResource("sphere.obj") );
         //kinda silly for exception handling. in a real sitch, Idwanna initialize ObjLoader, and only load the object in the block
-        loader.load(&mMesh);
-        mVboMesh = gl::VboMesh(mMesh);
+        loader.load(&mSphereTri);
+        mSphereMesh = gl::VboMesh(mSphereTri);
     }
     catch(...)
     {
@@ -352,6 +366,73 @@ bool basicSphereTesterApp::createSphere()
         return false;
     }
     return true;
+}
+
+bool basicSphereTesterApp::loadPlane()
+{
+    try {
+        ObjLoader loader( (DataSourceRef) loadResource("plane.obj") );
+        //kinda silly for exception handling. in a real sitch, Idwanna initialize ObjLoader, and only load the object in the block
+        loader.load(&mPlaneTri);
+        mPlaneMesh = gl::VboMesh(mPlaneTri);
+    }
+    catch(...)
+    {
+        cout << "failed to load object! goodbye!\n";
+        return false;
+    }
+    return true;
+}
+
+void basicSphereTesterApp::createPlane()
+{
+    TriMesh mesh;
+    // use the TriMesh class to easily construct the vertex buffer object
+	// create vertex, normal and texcoord buffers
+	const int RES_X = 400;
+	const int RES_Z = 100;
+	const Vec3f size(1.0f, 0.05f, .5f);
+    
+	for(int x=0;x<RES_X;++x) {
+		for(int z=0;z<RES_Z;++z) {
+			float u = float(x) / RES_X; //normalized 0-1 based on res;
+			float v = float(z) / RES_Z; //normalized 0-1 based on res;
+			mesh.appendVertex( size * Vec3f( u - 0.5f , 0.0f, v - 0.5f ) ); //range is (-0.5, 0, -0.5) * size -> (0.5, 0, 0.5) * size
+			mesh.appendNormal( Vec3f::yAxis() ); //this is [0,1,0]
+			mesh.appendTexCoord( Vec2f( u, v ) );
+            
+		}
+	}
+    
+	// create index buffer
+	vector< uint32_t > indices;
+	for(int x=0;x<RES_X-1;++x) {
+		for(int z=0;z<RES_Z-1;++z) {
+			uint32_t i = x * RES_Z + z; //basic index-from-coordinate
+            
+			indices.push_back( i ); indices.push_back( i + 1 ); indices.push_back( i + RES_Z );
+			indices.push_back( i + RES_Z );  indices.push_back( i + 1 ); indices.push_back( i + RES_Z + 1 );
+            //http://www.learnopengles.com/android-lesson-eight-an-introduction-to-index-buffer-objects-ibos/ //done different doe.
+            //if you can't dig this, draw it, considering i + res_Z is adjacent to i on the next row.
+            //so we draw one right-side-up and one upside-down
+		}
+	}
+	mesh.appendIndices( &indices.front(), indices.size() );
+    
+	// construct vertex buffer object
+	gl::VboMesh::Layout layout;
+	layout.setStaticPositions();
+	layout.setStaticTexCoords2d();
+	layout.setStaticIndices();
+	layout.setStaticNormals();
+    
+	mPlaneMesh = gl::VboMesh( mesh, layout );
+    
+    fs::path path = getSaveFilePath( "plane.obj" );
+    if( ! path.empty() ) {
+        console() << "Saving to " << path;
+        ObjLoader::write( writeFile( path ), mesh );
+    }
 }
 
 

@@ -24,6 +24,7 @@
 		987F0712192FC36E009730F1 /* Blackened-Chicken-Pre-Cooked.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 987F0711192FC36E009730F1 /* Blackened-Chicken-Pre-Cooked.jpg */; };
 		987F0714192FE0E7009730F1 /* displacement_map_perlin_frag.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 987F0713192FE0E7009730F1 /* displacement_map_perlin_frag.glsl */; };
 		987F0718192FFA78009730F1 /* sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = 987F0717192FFA78009730F1 /* sphere.obj */; };
+		987F072A1930415F009730F1 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 987F07291930415F009730F1 /* plane.obj */; };
 		D199421ED6674574B44C54B8 /* basicSphereTesterApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA25BD4402BB41938F1B3DF1 /* basicSphereTesterApp.cpp */; };
 		E47A6B7FF06C4EF7831AB33D /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = EC4D7F6DF40D4839AFFA1AF7 /* CinderApp.icns */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		987F0711192FC36E009730F1 /* Blackened-Chicken-Pre-Cooked.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Blackened-Chicken-Pre-Cooked.jpg"; sourceTree = "<group>"; };
 		987F0713192FE0E7009730F1 /* displacement_map_perlin_frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = displacement_map_perlin_frag.glsl; sourceTree = "<group>"; };
 		987F0717192FFA78009730F1 /* sphere.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sphere.obj; sourceTree = "<group>"; };
+		987F07291930415F009730F1 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.obj; sourceTree = "<group>"; };
 		B1DC0E1DAEA9441B986B8FC1 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
 		EC4D7F6DF40D4839AFFA1AF7 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
 		FA25BD4402BB41938F1B3DF1 /* basicSphereTesterApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = basicSphereTesterApp.cpp; path = ../src/basicSphereTesterApp.cpp; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				987F07291930415F009730F1 /* plane.obj */,
 				987F0717192FFA78009730F1 /* sphere.obj */,
 				987F0713192FE0E7009730F1 /* displacement_map_perlin_frag.glsl */,
 				987F0711192FC36E009730F1 /* Blackened-Chicken-Pre-Cooked.jpg */,
@@ -233,6 +236,7 @@
 				987F0706192FB5F3009730F1 /* displacement_map_frag.glsl in Resources */,
 				987F070E192FB60E009730F1 /* mesh_frag.glsl in Resources */,
 				987F0708192FB5FA009730F1 /* displacement_map_vert.glsl in Resources */,
+				987F072A1930415F009730F1 /* plane.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

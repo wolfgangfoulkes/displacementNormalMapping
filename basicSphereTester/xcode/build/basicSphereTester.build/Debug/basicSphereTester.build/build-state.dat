@@ -13,6 +13,7 @@ cCpResource displacement_map_perlin_frag.glsl build/Debug/basicSphereTester.app/
 cCpResource displacement_map_frag.glsl build/Debug/basicSphereTester.app/Contents/Resources/displacement_map_frag.glsl
 cCpResource mesh_frag.glsl build/Debug/basicSphereTester.app/Contents/Resources/mesh_frag.glsl
 cCpResource displacement_map_vert.glsl build/Debug/basicSphereTester.app/Contents/Resources/displacement_map_vert.glsl
+cCpResource plane.obj build/Debug/basicSphereTester.app/Contents/Resources/plane.obj
 cProcessPCH++ /var/folders/r7/4x0kd2d95x9bnzvqrb4zcb0m0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/basicSphereTester_Prefix-hghjqlquescfczfzomvndofxiowh/basicSphereTester_Prefix.pch.pch basicSphereTester_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTesterApp.o /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/src/basicSphereTesterApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 cLd /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/MacOS/basicSphereTester normal i386
@@ -434,9 +435,9 @@ t1400860847
 s459637
 
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/src/basicSphereTesterApp.cpp
-c00000000537FE7AD00000000000024A5
-t1400891309
-s9381
+c0000000053800D0E0000000000002F0A
+t1400900878
+s12042
 
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/Blackened-Chicken-Pre-Cooked.jpg
 c00000000537BDE9700000000002B1B38
@@ -454,7 +455,7 @@ t1400860847
 s301
 
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app
-t1400891279
+t1400900841
 s102
 
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Info.plist
@@ -462,8 +463,8 @@ t1400862114
 s1511
 
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/MacOS/basicSphereTester
-t1400891311
-s3416032
+t1400900881
+s3505976
 
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/PkgInfo
 t1400862114
@@ -490,8 +491,8 @@ t1400866017
 s292
 
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Resources/mesh_frag.glsl
-t1400886081
-s934
+t1400898715
+s938
 
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Resources/mesh_vert.glsl
 t1400866017
@@ -504,6 +505,10 @@ s1004
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Resources/normal_map_vert.glsl
 t1400866017
 s268
+
+N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Resources/plane.obj
+t1400900116
+s5902334
 
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Resources/sphere.obj
 t1400883392
@@ -523,8 +528,8 @@ t1400862114
 s183
 
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTesterApp.o
-t1400891311
-s2487432
+t1400900880
+s2612452
 
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/displacement_map_frag.glsl
 c00000000537F75A200000000000003EE
@@ -542,9 +547,9 @@ t1400791003
 s292
 
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/mesh_frag.glsl
-c00000000537FD34100000000000003A6
-t1400886081
-s934
+c00000000537FF9C300000000000003AA
+t1400895939
+s938
 
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/mesh_vert.glsl
 c00000000537E7157000000000000030C
@@ -560,6 +565,11 @@ N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode
 c00000000537E5FDB000000000000010C
 t1400791003
 s268
+
+N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/plane.obj
+c000000005380098C00000000005A0FFE
+t1400899980
+s5902334
 
 N/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/sphere.obj
 c000000004F206EE2000000000000DE45
@@ -4630,11 +4640,11 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciese7725f2d1f30b941^6eda602d1f30b941^---0#1#1#--18"Check dependencies36"15E11F77-C5A0-42FD-9CD3-549C3EB66840-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesbe68778e4430b941^a0fa778e4430b941^---0#1#1#--18"Check dependencies36"D6B30F19-9B71-4ED8-B94A-0DAD97C353F6-
 
 CCompileC build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTesterApp.o /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/src/basicSphereTesterApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s422584109.397419
-e422584111.174669
+s422593678.480439
+e422593680.354749
 r1
 xCompileC
 xbuild/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTesterApp.o
@@ -4664,8 +4674,8 @@ d/Users/wolfgag/cinder_0.8.5_mac/boost/boost/type_traits/detail/template_arity_s
 d/Users/wolfgag/cinder_0.8.5_mac/boost/boost/type_traits/detail/type_trait_undef.hpp
 d/Users/wolfgag/cinder_0.8.5_mac/boost/boost/type_traits/remove_volatile.hpp
 d/Users/wolfgag/cinder_0.8.5_mac/include/cinder/Sphere.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/src/basicSphereTesterApp.cpp274"CompileC build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTesterApp.o /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/src/basicSphereTesterApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler59de652d1f30b941^45b92c2f1f30b941^---0#0#1#-19%DVTDocumentLocation2@109"file:///Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/src/basicSphereTesterApp.cpp0000000000000000^3723"CompileC build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTesterApp.o /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/src/basicSphereTesterApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/basicSphereTester-generated-files.hmap -I/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/basicSphereTester-own-target-headers.hmap -I/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/basicSphereTester-all-target-headers.hmap -iquote /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/basicSphereTester-project-headers.hmap -iquote../../../../cinder_0.8.5_mac/include -iquote../include -I/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/include -I../../../../cinder_0.8.5_mac/boost -I/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/DerivedSources/i386 -I/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/DerivedSources -F/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug -include /var/folders/r7/4x0kd2d95x9bnzvqrb4zcb0m0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/basicSphereTester_Prefix-hghjqlquescfczfzomvndofxiowh/basicSphereTester_Prefix.pch -MMD -MT dependencies -MF /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTesterApp.d --serialize-diagnostics /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTesterApp.dia -c /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/src/basicSphereTesterApp.cpp -o /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTesterApp.o36"5967D841-14BD-43D2-B4E6-56E5109731D2-
-bA13B6A62-05F6-4081-AECA-B8D3C4995AFD
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/src/basicSphereTesterApp.cpp274"CompileC build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTesterApp.o /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/src/basicSphereTesterApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compilerdc107b8e4430b941^5fd45a904430b941^---0#0#1#-19%DVTDocumentLocation2@109"file:///Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/src/basicSphereTesterApp.cpp0000000000000000^3723"CompileC build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTesterApp.o /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/src/basicSphereTesterApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/basicSphereTester-generated-files.hmap -I/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/basicSphereTester-own-target-headers.hmap -I/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/basicSphereTester-all-target-headers.hmap -iquote /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/basicSphereTester-project-headers.hmap -iquote../../../../cinder_0.8.5_mac/include -iquote../include -I/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/include -I../../../../cinder_0.8.5_mac/boost -I/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/DerivedSources/i386 -I/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/DerivedSources -F/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug -include /var/folders/r7/4x0kd2d95x9bnzvqrb4zcb0m0000gn/C/com.apple.DeveloperTools/5.1-5B130a/Xcode/SharedPrecompiledHeaders/basicSphereTester_Prefix-hghjqlquescfczfzomvndofxiowh/basicSphereTester_Prefix.pch -MMD -MT dependencies -MF /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTesterApp.d --serialize-diagnostics /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTesterApp.dia -c /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/src/basicSphereTesterApp.cpp -o /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTesterApp.o36"F892B8CF-0B4E-41A4-B637-22C42273947B-
+bF03BF2E0-CE0C-449A-9304-3D0552D85001
 
 CCpResource /Users/wolfgag/Desktop/sphere_noise_frag.glsl build/Debug/basicSphereTester.app/Contents/Resources/sphere_noise_frag.glsl
 r0
@@ -4721,14 +4731,14 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy bu
 b6899E389-B38E-486F-B03A-4450F3FEDE5A
 
 CCpResource mesh_frag.glsl build/Debug/basicSphereTester.app/Contents/Resources/mesh_frag.glsl
-s422578881.445656
-e422578881.446576
+s422591515.377250
+e422591515.377967
 r1
 xCpResource
 xmesh_frag.glsl
 xbuild/Debug/basicSphereTester.app/Contents/Resources/mesh_frag.glsl
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy build/Debug/basicSphereTester.app/Contents/Resources/mesh_frag.glsl93"CpResource mesh_frag.glsl build/Debug/basicSphereTester.app/Contents/Resources/mesh_frag.glslf22372c10a30b941^29ae72c10a30b941^---0#0#1#-19%DVTDocumentLocation2@154"file:///Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Resources/mesh_frag.glsl0000000000000000^521"CpResource mesh_frag.glsl build/Debug/basicSphereTester.app/Contents/Resources/mesh_frag.glsl    cd /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/mesh_frag.glsl /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Resources36"35EC1B2F-1C7F-43C4-9D26-16C92D61F545-
-b474FF44F-2DBD-49B3-BFA7-C906E2A1D747
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy build/Debug/basicSphereTester.app/Contents/Resources/mesh_frag.glsl93"CpResource mesh_frag.glsl build/Debug/basicSphereTester.app/Contents/Resources/mesh_frag.glsl5a9d601b3c30b941^4911611b3c30b941^---0#0#1#-19%DVTDocumentLocation2@154"file:///Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Resources/mesh_frag.glsl0000000000000000^521"CpResource mesh_frag.glsl build/Debug/basicSphereTester.app/Contents/Resources/mesh_frag.glsl    cd /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/mesh_frag.glsl /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Resources36"0360EF11-EFD2-4923-89BE-79E284E62DD8-
+b6459C047-A5EC-47C5-9536-CD8D3BF5011E
 
 CCpResource mesh_vert.glsl build/Debug/basicSphereTester.app/Contents/Resources/mesh_vert.glsl
 s422558817.900579
@@ -4759,6 +4769,16 @@ xnormal_map_vert.glsl
 xbuild/Debug/basicSphereTester.app/Contents/Resources/normal_map_vert.glsl
 lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Copy build/Debug/basicSphereTester.app/Contents/Resources/normal_map_vert.glsl105"CpResource normal_map_vert.glsl build/Debug/basicSphereTester.app/Contents/Resources/normal_map_vert.glsla164e661bc2fb941^93c7fb61bc2fb941^---0#0#1#-19%DVTDocumentLocation2@160"file:///Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Resources/normal_map_vert.glsl003450afdeffdf42^539"CpResource normal_map_vert.glsl build/Debug/basicSphereTester.app/Contents/Resources/normal_map_vert.glsl    cd /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/normal_map_vert.glsl /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Resources36"107C5EDC-6E3C-4749-B653-B22AC4A853D9-
 b6899E389-B38E-486F-B03A-4450F3FEDE5A
+
+CCpResource plane.obj build/Debug/basicSphereTester.app/Contents/Resources/plane.obj
+s422592916.199925
+e422592916.517376
+r1
+xCpResource
+xplane.obj
+xbuild/Debug/basicSphereTester.app/Contents/Resources/plane.obj
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Debug/basicSphereTester.app/Contents/Resources/plane.obj83"CpResource plane.obj build/Debug/basicSphereTester.app/Contents/Resources/plane.objf03633944130b941^4f7584944130b941^---0#0#1#-19%DVTDocumentLocation2@149"file:///Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Resources/plane.obj003450afdeffdf42^506"CpResource plane.obj build/Debug/basicSphereTester.app/Contents/Resources/plane.obj    cd /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/plane.obj /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Resources36"6CE40874-BB51-4F7C-94D4-FCBA30B7A6C5-
+b32F635F7-A98E-4099-880A-3EBC6BC902D0
 
 CCpResource sphere.obj build/Debug/basicSphereTester.app/Contents/Resources/sphere.obj
 s422576192.577272
@@ -4791,8 +4811,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Copy bu
 b4AF864E8-BFA5-4BD5-B14D-168F3F4282B4
 
 CLd /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/MacOS/basicSphereTester normal i386
-s422584111.178772
-e422584111.943232
+s422593680.356733
+e422593681.140523
 r1
 xLd
 x/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/MacOS/basicSphereTester
@@ -4816,6 +4836,11 @@ d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/
 d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/AppKit
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
@@ -4845,11 +4870,6 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib
@@ -4876,8 +4896,8 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection151"Link /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/MacOS/basicSphereTester81"Ld build/Debug/basicSphereTester.app/Contents/MacOS/basicSphereTester normal i3860edc2d2f1f30b941^037af12f1f30b941^---0#0#1#--1462"Ld build/Debug/basicSphereTester.app/Contents/MacOS/basicSphereTester normal i386    cd /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode    export MACOSX_DEPLOYMENT_TARGET=10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug -F/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug -filelist /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTester.LinkFileList -mmacosx-version-min=10.7 -dead_strip ../../../../cinder_0.8.5_mac/lib/libcinder_d.a -stdlib=libc++ -framework Cocoa -framework OpenGL -framework CoreVideo -framework QTKit -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -Xlinker -dependency_info -Xlinker /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTester_dependency_info.dat -o /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/MacOS/basicSphereTester36"055C9C97-C39D-4253-ADDC-03ED553C1F74-
-bA13B6A62-05F6-4081-AECA-B8D3C4995AFD
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection151"Link /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/MacOS/basicSphereTester81"Ld build/Debug/basicSphereTester.app/Contents/MacOS/basicSphereTester normal i38635615b904430b941^6efa23914430b941^---0#0#1#--1462"Ld build/Debug/basicSphereTester.app/Contents/MacOS/basicSphereTester normal i386    cd /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode    export MACOSX_DEPLOYMENT_TARGET=10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug -F/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug -filelist /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTester.LinkFileList -mmacosx-version-min=10.7 -dead_strip ../../../../cinder_0.8.5_mac/lib/libcinder_d.a -stdlib=libc++ -framework Cocoa -framework OpenGL -framework CoreVideo -framework QTKit -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -Xlinker -dependency_info -Xlinker /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/basicSphereTester.build/Debug/basicSphereTester.build/Objects-normal/i386/basicSphereTester_dependency_info.dat -o /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/MacOS/basicSphereTester36"6E9BC35E-F169-4084-B0D5-F45F86EB9DC7-
+bF03BF2E0-CE0C-449A-9304-3D0552D85001
 
 CProcessInfoPlistFile /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app/Contents/Info.plist /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/Info.plist
 s422554914.279019
@@ -5699,11 +5719,11 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Precomp
 b50B28429-226D-4E9C-9C53-83951C91605F
 
 CTouch /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app
-s422584111.945646
-e422584111.951133
+s422593681.141568
+e422593681.145018
 r1
 xTouch
 x/Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Touch /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app39"Touch build/Debug/basicSphereTester.app1827f22f1f30b941^5a7ff32f1f30b941^---0#0#1#--263"Touch build/Debug/basicSphereTester.app    cd /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode    /usr/bin/touch -c /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app36"BAC9507B-8C84-47AE-B200-467E4D495BDB-
-bA13B6A62-05F6-4081-AECA-B8D3C4995AFD
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Touch /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app39"Touch build/Debug/basicSphereTester.app7c4824914430b941^f32025914430b941^---0#0#1#--263"Touch build/Debug/basicSphereTester.app    cd /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode    /usr/bin/touch -c /Users/wolfgag/cinderProjects/displacementNormalMapping/basicSphereTester/xcode/build/Debug/basicSphereTester.app36"B0CC6965-ED70-41D3-B085-9FB2C73CFE91-
+bF03BF2E0-CE0C-449A-9304-3D0552D85001
 
